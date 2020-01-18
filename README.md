@@ -3,7 +3,7 @@ One click production website in wordpress with SSL <br>
 
 In order to achieve the same, firstly clone/download this repository and after that follow the steps below:<br>
 
-<h1>Step 1:</h1> Change the <em>WORDPRESS_ROOT_PASSWORD</em> as per your password requirments.<br>
+<strong>Step 1:</strong> Change the <strong><em>WORDPRESS_ROOT_PASSWORD</em></strong> as per your password requirments.<br>
 
 <strong>Step 2:</strong> Change the <em>WORDPRESS_DB_NAME</em> as per your desired requirments.<br>
 
