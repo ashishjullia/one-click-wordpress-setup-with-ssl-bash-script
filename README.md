@@ -1,4 +1,4 @@
-#  One Click Docker Wordpress LEMP Set-up (With SSL)
+#  One Click Wordpress LEMP Set-up (With SSL)
 One click production website in wordpress with SSL <br>
 
 In order to achieve the same, firstly clone/download this repository and after that follow the steps below:<br>
@@ -32,5 +32,3 @@ After doing all the steps, make sure you have the <strong><em>docker</em></stron
 After that, you just have to run the following commands:<br>
 
 <strong>Note:</strong> The commands are only to work from the cloned repository directory, also in which <strong><em>main.sh</em></strong> and <strong><em>default.conf</em></strong> are present.
-
-<strong>Command:</strong> sudo docker-compose up -d
