@@ -27,8 +27,6 @@ For further configurations, you can also change the following variable values fo
 
 <strong>Step 10:</strong> Change the <strong><em>POST_MAX_SIZE_PHP</em></strong> as per your needs.<br>
 
-After doing all the steps, make sure you have the <strong><em>docker</em></strong> installed.<br>
-
 After that, you just have to run the following commands:<br>
 
 <strong>Note:</strong> The commands are only to work from the cloned repository directory, also in which <strong><em>main.sh</em></strong> and <strong><em>default.conf</em></strong> are present.
