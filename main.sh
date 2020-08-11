@@ -55,7 +55,7 @@ sudo systemctl reload nginx
 
 #Download latest wordpress
 cd /tmp && curl -LO https://wordpress.org/latest.tar.gz
-tar xzvf latest.tar.gz
+tar xzf latest.tar.gz
 cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php
 
 #Preparing wordpress
