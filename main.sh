@@ -47,10 +47,10 @@ sudo sed -i '55 s|#||' /etc/nginx/nginx.conf
 sudo sed -i "23 a $CLIENT_MAX_BODY_SIZE_NGINX" /etc/nginx/nginx.conf
 
 #Setting up php.ini file
-sudo sed -i "s/upload_max_filesize = 2M/$UPLOAD_MAX_FILESIZE_PHP/g" /etc/php/7.2/fpm/php.ini
-sudo sed -i "s/post_max_size = 8M/$POST_MAX_SIZE_PHP/g" /etc/php/7.2/fpm/php.ini
+sudo sed -i "s/upload_max_filesize = 2M/$UPLOAD_MAX_FILESIZE_PHP/g" /etc/php/7.4/fpm/php.ini
+sudo sed -i "s/post_max_size = 8M/$POST_MAX_SIZE_PHP/g" /etc/php/7.4/fpm/php.ini
 
-sudo systemctl restart php7.2-fpm
+sudo systemctl restart php7.4-fpm
 sudo systemctl reload nginx
 
 #Download latest wordpress
@@ -79,6 +79,6 @@ sudo apt install -y software-properties-common
 sudo add-apt-repository ppa:certbot/certbot -y
 sudo apt update -y
 sudo apt install -y certbot
-sudo apt install -y certbot python-certbot-nginx
+sudo apt install -y certbot python3-certbot-nginx
 sudo sed -i "s|server_name|server_name $WEBSITE_NAME $WEBSITE_NAME_WITH_WWW;|g" /etc/nginx/sites-available/website
 sudo certbot --nginx --noninteractive --redirect --agree-tos --no-eff-email -m ${EMAIL} -d ${WEBSITE_NAME} -d ${WEBSITE_NAME_WITH_WWW}
