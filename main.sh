@@ -36,7 +36,9 @@ sudo systemctl reload nginx
 
 #Setting up database for wordpress
 sudo mysql -u root -p$WORDPRESS_ROOT_PASSWORD -e "CREATE DATABASE $WORDPRESS_DB_NAME DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
-sudo mysql -u root -p$WORDPRESS_ROOT_PASSWORD -e "GRANT ALL ON $WORDPRESS_DB_NAME.* TO '$WORDPRESS_USER'@'localhost' IDENTIFIED BY '$WORDPRESS_USER_PASSWORD';"
+#sudo mysql -u root -p$WORDPRESS_ROOT_PASSWORD -e "GRANT ALL ON $WORDPRESS_DB_NAME.* TO '$WORDPRESS_USER'@'localhost' IDENTIFIED BY '$WORDPRESS_USER_PASSWORD';"
+sudo mysql -u root -p$WORDPRESS_ROOT_PASSWORD -e "CREATE USER '$WORDPRESS_USER'@'localhost' IDENTIFIED WITH mysql_native_password BY '$WORDPRESS_USER_PASSWORD';"
+sudo mysql -u root -p$WORDPRESS_ROOT_PASSWORD -e "GRANT ALL PRIVILEGES ON $WORDPRESS_DB_NAME.* TO '$WORDPRESS_USER'@'localhost';"
 sudo mysql -u root -p$WORDPRESS_ROOT_PASSWORD -e "FLUSH PRIVILEGES;"
 
 #Installing required packages for php
